@@ -96,7 +96,7 @@ mutNum <- 1337
 *)
 let myInt = 2
 let myFloat = 2.0
-(** include-value : myInt ***)
+(*** include-value : myInt ***)
 (*** include-value : myFloat ***)
 (**
 </div>
@@ -158,15 +158,22 @@ squareFloat (float 4)
 
 <div class="fragment">
 <ul>
-<li>Curried (allows partial function application).
+<li>Curried by the compiler.
 </ul>
 *)
 let add x y = x + y
 add 5 3
+(*** include-value : add 5 3 ***)
+(**
+</div>
 
+<div class="fragement">
+<ul>
+<li>Currying allows partial function application.
+</ul>
+*)
 let add10 = add 10
 add10 5
-(*** include-value : add 5 3 ***)
 (*** include-value : add10 5 ***)
 (**
 </div>
