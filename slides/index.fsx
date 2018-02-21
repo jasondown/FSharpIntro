@@ -21,21 +21,22 @@ Feb-21-2018
 
 <br />
 
-* Brief F# Primer
+* Brief F# Primer (~20 mins)
     * What is F#
     * Syntax overview
     * Types (relative to demo)
     * Pattern matching basics
     * Demo F# Interactive
-* Type Providers
+* Type Providers (~15 mins)
     * What are they?
     * How do they work?
     * Demo SqlProgrammability type provider (via fsx)
-* Main Demo w/ Walkthrough
+* Main Demo w/ Walkthrough (~15 mins)
     * Small, but complete solution
         * F# DAL library (w/ friendly C# layer)
         * C# Model library
         * C# Winforms application
+*  Q & A  (~10 mins)
 
 ***
 
@@ -43,10 +44,11 @@ Feb-21-2018
 
 ##### What is F#?
 
+* Mature, Open Source, Cross-platform
 * .Net Language
     * Access to .Net libraries
     * Interop with other .Net languages
-* Strongly typed (inference is stronger than C#)
+* Statically typed (inference is stronger than C#)
 * Multi-paradigm
     * Functional (first)
     * Imperative
@@ -528,4 +530,131 @@ Workflow: Scripts (fsx) -> Test out functions -> Convert to library (fs).
 
 ## DEMO
 
+***
+
+### F# Type Providers
+
+<div class="fragment">
+##### What are they?
+</div>
+
+<div class="fragment">
+<ul>
+<li><em>Voodoo!</em>
+</ul>
+</div>
+<br />
+
+<div class="fragment">
+<ul>
+<li>Designed to work specifically with F# compiler.
+<li>i.e. A compiler plugin library.
+<li>Statically typed access to a data source.
+    <ul>
+    <li>Compile-time safety (while you type)
+    <li>Intellisense
+    <li>Tooltips
+    </ul>
+</ul>
+</div>
+
+---
+
+### F# Type Providers
+
+##### What Are They? con't
+
+<div class="fragment">
+Examples of data you can access:
+<br />
+<br />
+<ul>
+<li>Relational tables, stored procs etc.
+<li>CSV, JSON, XML, HTML
+<li>OData, WSDL
+<li>Custom Providers (World Bank)
+<li>Can create your own (for APIs etc.)
+</ul>
+</div>
+
+---
+
+### F# Type Providers
+
+##### How do they work?
+
+<div class="fragment">
+<em>Magic, of course!</em>
+</div>
+
+<div class="fragment">
+<ul>
+<li>Compile time analyzer.
+<li>Looks at meta data to generate types.
+    <ul>
+    <li>Connection string (compile vs runtime can be different).
+    <li>Static schema source (sample csv file, actual JSON text etc.).
+    </ul>
+<li>Generated Types (for other .Net langauges).
+<li>Erased Types (only accessible via F# type providers).
+    <ul>
+    <li>Allows delayed types (only as much information as needed)
+    <li>Allows nested types
+    <li>As I said, magic!
+    <ul>
+</ul>
+
+---
+
+### F# Type Providers
+
+<br />
+<br />
+
+## DEMO
+
+***
+
+### Main Demo Application
+
+##### Overview
+
+<div class="fragment">
+<ul>
+<li>WinForms Application, accesses
+<li>C# Library, accesses
+<li>F# DAL
+    <ul>
+    <li>Thin C# friendly layer
+    <li>F# type provider for stored proc
+    </ul>
+</ul>
+</div>
+
+---
+
+### Main Demo Application
+
+<br />
+<br />
+
+## DEMO
+
+***
+
+### Q & A
+
+#### Thanks For Watching
+<br />
+##### More Information:
+* FSharp.Org
+    *[http://fsharp.org/](http://fsharp.org/)
+* FSharp.Data
+    * [http://fsharp.github.io/FSharp.Data/](http://fsharp.github.io/FSharp.Data/)
+* FSharp.Data.SqlClient
+    * [http://fsprojects.github.io/FSharp.Data.SqlClient/index.html](http://fsprojects.github.io/FSharp.Data.SqlClient/index.html)
+* FSharp Component Design GuideLines
+    * [http://fsharp.org/specs/component-design-guidelines](http://fsharp.org/specs/component-design-guidelines)
+* This presentation
+    * [https://github.com/jasondown/FSharpIntro](https://github.com/jasondown/FSharpIntro)
 *)
