@@ -57,7 +57,7 @@ Feb-21-2018
 
 ### F# Syntax
 
-##### let binding
+##### let Binding
 
 <div class="fragment">
 <ul>
@@ -87,14 +87,16 @@ mutNum <- 1337
 
 ### F# Syntax
 
-##### Functions Con't
+##### Let Binding Con't
 
 <div class="fragment">
 <ul>
 <li>Types are inferred (still compile-time safe).
 </ul>
 *)
+let myInt = 2
 let myFloat = 2.0
+(** include-value : myInt ***)
 (*** include-value : myFloat ***)
 (**
 </div>
