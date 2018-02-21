@@ -26,12 +26,12 @@ Feb-21-2018
     * Syntax overview
     * Types (relative to demo)
     * Pattern matching basics
-    * F# Interactive
-* Type providers
+    * Demo F# Interactive
+* Type Providers
     * What are they?
     * How do they work?
     * Demo SqlProgrammability type provider (via fsx)
-* Demo
+* Main Demo w/ Walkthrough
     * Small, but complete solution
         * F# DAL library (w/ friendly C# layer)
         * C# Model library
