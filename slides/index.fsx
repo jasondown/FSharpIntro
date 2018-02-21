@@ -32,10 +32,9 @@ Feb-21-2018
     * How do they work?
     * Demo SqlProgrammability type provider (via fsx)
 * Main Demo w/ Walkthrough (~15 mins)
-    * Small, but complete solution
-        * F# DAL library (w/ friendly C# layer)
-        * C# Model library
-        * C# Winforms application
+    * F# DAL library (w/ friendly C# layer)
+    * C# Model library
+    * C# Winforms application
 *  Q & A  (~10 mins)
 
 ***
@@ -648,7 +647,7 @@ Examples of data you can access:
 <br />
 ##### More Information:
 * FSharp.Org
-    *[http://fsharp.org/](http://fsharp.org/)
+    * [http://fsharp.org/](http://fsharp.org/)
 * FSharp.Data
     * [http://fsharp.github.io/FSharp.Data/](http://fsharp.github.io/FSharp.Data/)
 * FSharp.Data.SqlClient
