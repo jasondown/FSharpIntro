@@ -186,8 +186,7 @@ add10 5
 
 <div class="fragment">
 <ul>
-<li>Passes previous evaluation result and passes as last argument to next function.
-<li>Allows chaining transformations together.
+<li>Previous evaluation result passed as last argument of next function.
 </ul>
 <br />
 <br />
@@ -213,7 +212,7 @@ myComplicatedFunc 2 3
 ##### Pipe Forward Operator Con't
 
 <ul>
-<li>With pipe (read left to right):
+<li>With pipe (read left to right, chained transformation):
 </ul>
 *)
 let myComplicatedFunc2 x y =
