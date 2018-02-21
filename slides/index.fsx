@@ -46,7 +46,7 @@ Feb-21-2018
 * .Net Language
     * Access to .Net libraries
     * Interop with other .Net languages
-* Strongly typed (inference is stronger than c#)
+* Strongly typed (inference is stronger than C#)
 * Multi-paradigm
     * Functional (first)
     * Imperative
