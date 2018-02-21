@@ -52,6 +52,7 @@ Feb-21-2018
     * Imperative
     * Object-Oriented
 * Pragmatic
+* Inspired many C# features (generics, lambdas, linq, pattern matching)
 
 ***
 
@@ -167,7 +168,7 @@ add 5 3
 (**
 </div>
 
-<div class="fragement">
+<div class="fragment">
 <ul>
 <li>Currying allows partial function application.
 </ul>
@@ -201,7 +202,7 @@ let myComplicatedFunc x y =
     (add10 (add x (square y)))
 
 myComplicatedFunc 2 3
-(*** include-value : myComplicatedValue 2 3 ***)
+(*** include-value : myComplicatedFunc 2 3 ***)
 (**
 </div>
 
@@ -320,7 +321,7 @@ p1.Name
 </ul>
 *)
 let yoda = { Person.Age = 900; Skillz = ["lightsaber"; "the force"]}
-// Copmiler Error: No assignment given for field 'Name' of type 'Person'
+// Compiler Error: No assignment given for field 'Name' of type 'Person'
 (*** include-value : yoda ***)
 (**
 </div>
