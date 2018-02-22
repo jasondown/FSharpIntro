@@ -55,6 +55,11 @@ Feb-21-2018
 * Pragmatic
 * Inspired many C# features (generics, lambdas, linq, pattern matching)
 
+' Mature - 2005
+' F# Default is functional
+' C# - OO first (with some functional style)
+' Pragmatic over pure functional
+
 ***
 
 ### F# Syntax
@@ -78,6 +83,13 @@ let numCompare = num = 1337 // i.e. this
 <ul>
 <li><i>mutable</i> keyword allows variables.
 </ul>
+
+' Expression-based -> 
+' Evaulates expression and bind values to identifier
+' Not statement based with variable assignment
+' Some .Net BCL types are mutable
+' F# must support mutability (also pragmatic)
+
 *)
 let mutable mutNum = 42
 mutNum <- 1337
@@ -102,6 +114,9 @@ let myFloat = 2.0
 (*** include-value : myFloat ***)
 (**
 </div>
+
+' No types in previous slides
+' Type inference (like C# var keyword)
 
 ---
 
@@ -144,6 +159,11 @@ squareFloat 4. // or square 4.0
 <ul>
 <li>Can't pass int to float without a cast.
 </ul>
+
+' Readability
+' Compiler can't figure it out (ambiguity)
+' Enforce a type (compiler will make a generic as possibles)
+
 *)
 squareFloat 4 // compile error
 squareFloat (float 4)
@@ -179,6 +199,9 @@ add10 5
 (*** include-value : add10 5 ***)
 (**
 </div>
+
+' Multiple parameter function
+' Spaces not commas (tuples)
 
 ---
 
@@ -219,6 +242,8 @@ myComplicatedFunc 2 3
 *)
 let myComplicatedFunc2 x y =
     y |> square |> add x |> add10
+
+myComplicatedFunc2 2 3
 (*** include-value : myComplicatedFunc2 2 3 ***)
 (**
 
@@ -239,9 +264,7 @@ let squareEvens =
     |> List.map (fun x -> x * x)        // square
 (*** include-value : squareEvens ***)
 (**
-</div>
 
-<div class="fragment">
 <br />
 <br />
 <ul>
@@ -310,6 +333,10 @@ p1.Name
 (**
 </div>
 
+' Seq is alias for IEnumerable
+' Creates a normal .Net class
+' Identifier.Field
+
 ---
 
 ### F# Types
@@ -321,7 +348,7 @@ p1.Name
 <li>Missing a field will not compile.
 </ul>
 *)
-let yoda = { Person.Age = 900; Skillz = ["lightsaber"; "the force"]}
+let yoda = { Age = 900; Skillz = ["lightsaber"; "the force"]}
 // Compiler Error: No assignment given for field 'Name' of type 'Person'
 (*** include-value : yoda ***)
 (**
@@ -353,6 +380,10 @@ let p1Equalsp3 = p1 = p3
 (*** include-value : p1Equalsp3 ***)
 (**
 </div>
+
+' Creates a copy of original
+' Reuses parts of the original in memory
+' Persistent data structure
 
 ---
 
@@ -392,9 +423,10 @@ let p1Equalsp3 = p1 = p3
 
 ##### Options
 
-<div class="fragment"
+<div class="fragment">
 <ul>
-<li>Specialized discriminated Union (not covering due to time).
+<li>Specialized discriminated union type.
+<li>Quick description of DU.
 <li>Option has some value or no value.
 *)
 // Commented out or it will affect script later on
@@ -409,6 +441,13 @@ let myValidString = "I am a value" |> Some
 let noValue = None
 (**
 </div>
+
+' DU: Like an enum, but can contain data
+' DU: Create type through one of data constructors
+' DU: Can be one and only one of those types
+' DU: Useful for pattern matching
+' Explicit has value or no value (better than null)
+' You must handle case with no value
 
 ---
 
@@ -495,6 +534,9 @@ let betterExample =
 (**
 </div>
 
+' Not matching None gives compiler warning
+' Catchall with underscore
+
 ---
 
 ### F# Pattern Matching
@@ -528,6 +570,11 @@ Workflow: Scripts (fsx) -> Test out functions -> Convert to library (fs).
 <br />
 
 ## DEMO
+
+' VS Code (cross-platform) with Ionide Plugin (open source)
+' let readNLines n = Array.init n (fun _ -> Console.ReadLine())
+' let myVals = readNLines 3
+' myVals |> Array.map (fun x -> x.ToUpperInvariant())
 
 ***
 
@@ -611,6 +658,8 @@ Examples of data you can access:
 <br />
 
 ## DEMO
+
+' Nuget package
 
 ***
 
