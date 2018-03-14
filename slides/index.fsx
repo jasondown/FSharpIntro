@@ -1,7 +1,7 @@
 (**
 - title : F# Type Provider Demo
 - description : A brief primer on F# and a few demos on F# type providers.
-- them : night
+- theme : night
 - transition : default
 
 ***
