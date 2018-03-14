@@ -30,7 +30,7 @@ Feb-21-2018
 * Type Providers (~15 mins)
     * What are they?
     * How do they work?
-    * Demo SqlProgrammability type provider (via fsx)
+    * Demo SqlProgrammabilityProvider (via fsx)
 * Main Demo w/ Walkthrough (~15 mins)
     * F# DAL library (w/ friendly C# layer)
     * C# Model library
@@ -162,7 +162,7 @@ squareFloat 4. // or square 4.0
 
 ' Readability
 ' Compiler can't figure it out (ambiguity)
-' Enforce a type (compiler will make a generic as possibles)
+' Enforce a type (compiler will make as generic as possible)
 
 *)
 squareFloat 4 // compile error
